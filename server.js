@@ -21,8 +21,7 @@ var text = fs.readFileSync("./public/index.html", 'utf8');
 
 const server = http.createServer(function (req, res) {
       res.writeHead(200, {'Content-Type': 'text/html'});
-      res.write(text);
-      res.end();
+      res.end(text);
 });
 
 console.log(`Server listening on port ${port}`);
