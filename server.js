@@ -20,11 +20,13 @@ var text = fs.readFileSync("./public/index.html", 'utf8');
 // The stuff that should be inside this function is all below.
 
 const server = http.createServer(function (req, res) {
-      console.log("Server listening on port ${port}");
       res.writeHead(200, {'Content-Type': 'text/html'});
       res.write(text);
       res.end();
-}).listen(port);
+});
+
+console.log(`Server listening on port ${port}`);
+server.listen(port);
 
 // If there is an error, put it on the console error and return. 
 // Do not be nice about exiting.
