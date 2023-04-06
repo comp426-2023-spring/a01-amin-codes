@@ -26,9 +26,8 @@ const server = http.createServer(function (req, res) {
             if (error) {
                 console.err(error);
             }
-            res.write(data);
+            res.end(data);
       });
-      res.end();
 }).listen(port);
 
 // If there is an error, put it on the console error and return. 
